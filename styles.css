@@ -1,20 +1,33 @@
 html {
-    font-family: Inter;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    line-height: 1.6;
+    background-color: #F8FAFC;
 }
 
 header {
     background-color: #FFFFFF;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    width: 100%;
+    padding: 60px 20px;
     text-align: center;
 }
 
 main {
-    background-color: #F8FAFC;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    width: 90%;
+    max-width: 640px;
+    margin: 40px auto;
+}
+
+article {
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 span {
@@ -25,19 +38,53 @@ hr {
     border: none;
     height: 1px;
     background-color: #D2D5DA;
+    margin: 30px 0;
 }
 
-h1{
-    font-size: 2.25rem;
-    font-weight: 600;
+a {
+    text-decoration: none;
+    color: #4E80EE;
 }
 
-h2 {
-    font-size: 1.5rem;
-    font-weight: 600;
+a:focus {
+    outline: 2px solid #4E80EE;
+    outline-offset: 4px;
+    border-radius: 4px;
 }
 
-.text {
-    font-size: 1rem;
-    font-weight: 400;
+a:active {
+    color: purple;
+}
+
+ul, ol {
+    padding-left: 1.5rem;
+    margin-left: 0;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+footer {
+    padding-left: 40px;
+    padding-top: 40px;
+}
+
+/*Tableta y Desktop*/
+@media (min-width: 1024px) {
+    main {
+        max-width: 800px;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 640px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    header {
+        padding: 40px 15px;
+    }
 }
